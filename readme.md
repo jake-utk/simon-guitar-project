@@ -1,0 +1,50 @@
+# Simon Game / Guitar Hero Edition
+
+## Project Description
+- I am going to create a "simon says" game / website that is styled like a "Guitar Hero" game. The computer selects one of four notes randomly, which light up one of four buttons across the guitar neck, each with a different guitar tone/chord (in a similar key). The user then has to replicate the same button selections. Each time the user replicates the computer's choices, the computer adds one additional note. This continues until the user messes up, in which the game ends.
+
+## Big Notes
+- Start with mobile, work towards desktop with completed project.
+
+## USER STORIES
+- As a player, I need to see a 4 button selection grid / row, so that I can know where I can make my color selections.
+- As a player, I need the board to light up as the computer makes selections, so I can see what pattern to emulate.
+- As a player, I need the board to light up as I click my selections, so I can tell what pick I made.
+- As a player, I need the pattern of selections the computer makes to be tracked, so that the winning sequence is recorded and can be compared against.
+-As a player, I want my selections to be tracked, so that my sequence can be matched to the computer's to see if I passed the round.
+- As a player, I need a turn indicator, so I know when it's my turn without having to keep track myself.
+- As a player, I need the turns to alternate between player and computer, so that the rounds can be progressed.
+- As a player, I want to see a message that tells me when the computer's turn is going on, so I know when to pay attention to the sequence on the game board.
+- As a player, I need the game board to not be interactive while the computer's pattern is being shown, so that I cannot interrupt the computer's turn
+- As a player, I need the game to recognize when I have correctly mimicked the computer's pattern, so that I know I've won the round.
+- As a player, I need the game to recognize when I have incorrectly entered the computer's pattern, so that I know I've lost the round.
+- As a player, I need to be informed when the game is over so that I can exit or restart.
+- As a player, I want the board to be inactive after the game is over, so that I don't keep playing and change the result.
+- As a player, I want a way to start the next round, so I can make sure I'm ready to observe the computer pattern.
+- As a player, I want a "reset game" button, so if the user's feeble mind cannot handle the pattern they can reset without the embarrassment of a loss.
+
+
+
+## Bronze Features
+- As a player, I want to see how many total selections were in the computer's last pattern.
+- As a player, I want to see how many correct selections I've made each turn as I select them, so I know how many more selections to make.
+
+
+## Silver Features
+- As a player, I would like a modal to pop up when I load into the page that briefly explains the instructions with a "ok let's play!" button.
+- As a player, I would like a high score displayed on the game board, so I can try to beat it between reloads.
+
+
+## Gold Features
+- As a player, I want each selection to come with a unique musical sound, so there's a level of immersion into a "concert" environment. (#1 GOAL)
+- As a player, I would like to be able to select between different instruments for different sound tones (perhaps an acoustic guitar or an electric guitar) for my button presses.
+- As a player, I would like to hear some sort of background music, so there's further immersion into a "concert" environment. (Gold - honestly not sure how possible this is considering anything that isn't done in rhythm is going to sound ridiculous)
+
+## Wire Frame
+![simon guitar wireframe](simon-guitar-wireframe.png)
+
+## Reflections along the way...
+-
+
+## Next Steps
+-
