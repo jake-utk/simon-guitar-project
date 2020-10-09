@@ -1,26 +1,25 @@
 body {
-    background-image: url('https://i.imgur.com/PvTUPaE.png');
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -50px;
-	margin-left: -100px;
-	/* background-attachment: fixed; */
-	/* background-position: bottom; */
-	/* filter: opacity(30%);
-	z-index: +10; */
+    background-image: url('https://i.imgur.com/l7ue4P4.png');
+	/* position: absolute; */
+	/* top: 50%;
+	left: 50%; */
+	/* margin-top: -50px;
+	margin-left: -100px; */
     background-repeat: no-repeat;
     text-align: center;
 }
 
 h1 {
+    font-size: 40px;
     padding-top: 1fr;
     padding-bottom: 2fr;
 }
 
 h2 {
-
+    font-size: 20px;
 }
+
+
 
 .guitarbuttons {
 	text-decoration: none;
@@ -39,7 +38,8 @@ h2 {
 }
 
 #guitar {
-	display: inline-block;
+    display: inline-block;
+    font-size: 16px;
 	/* grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%; */
 	/* grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%; */
 }
@@ -63,4 +63,16 @@ h2 {
 
 #d {
 	background: yellow;
+}
+
+#go {
+    font-size: 18px;
+}
+
+#round {
+    font-size: 20px;
+}
+
+#movesremaining {
+    font-size: 20px;
 }

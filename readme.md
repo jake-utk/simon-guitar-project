@@ -18,7 +18,7 @@
 - As a player, I need the board to light up as the computer makes selections, so I can see what pattern to emulate.
 - As a player, I need the board to light up as I click my selections, so I can tell what pick I made.
 - As a player, I need the pattern of selections the computer makes to be tracked, so that the winning sequence is recorded and can be compared against.
-  -As a player, I want my selections to be tracked, so that my sequence can be matched to the computer's to see if I passed the round.
+- As a player, I want my selections to be tracked, so that my sequence can be matched to the computer's to see if I passed the round.
 - As a player, I need a turn indicator, so I know when it's my turn without having to keep track myself.
 - As a player, I need the turns to alternate between player and computer, so that the rounds can be progressed.
 - As a player, I want to see a message that tells me when the computer's turn is going on, so I know when to pay attention to the sequence on the game board.
@@ -44,9 +44,11 @@
 
 - As a player, I want each selection to come with a unique musical sound, so there's a level of immersion into a "concert" environment. (#1 GOAL)
 - As a player, I would like the game to be playable on desktop or mobile, so I can play 24/7 at home or on the go.
-- As a player, I would like the option to use the 1, 2, 3, 4 keys to select buttons as oppose to clicks, in case my mouse dies from playing too much.
 - As a player, I would like to be able to select between different instruments for different sound tones (perhaps an acoustic guitar or an electric guitar) for my button presses.
 - As a player, I would like to hear some sort of background music, so there's further immersion into a "concert" environment. (Gold - honestly not sure how possible this is considering anything that isn't done in rhythm is going to sound ridiculous)
+- As a player, I would like the option to use the 1, 2, 3, 4 keys to select buttons as oppose to clicks, in case my mouse dies from playing too much.
+- A++ Goal, must have completed the last Gold Feature
+    - Put a button over the strumming part of the guitar.  Require 1/2/3/4 + click of strum button to register a move, and make it light up for each of Simon's moves to simulate strumming.  Try to replicate this with two taps/clicks on mobile?
 
 ## Wire Frame
 

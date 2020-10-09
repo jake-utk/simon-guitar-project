@@ -22,5 +22,6 @@
     -   
 
 
-- Stretch CSS
+-Stretch CSS
     - Could make the layout swap to a verticle guitar neck on mobile, horizontal neck on desktop.  Default now is horizontal for both, requiring a phone user to have to turn it sideways to view (or that is the idea).  Not sure if it would be better to go the other way to begin with...
+    - I wonder if I could change click events after a certain height/width of the screen is reached.  README.MD -> A++ GOAL FOR CONTEXT.  That way if the screen was the size of a mobile, the strum could listen for a click and the neck could listen for a click, for two screen taps.  One on the strum and one on the appropriate button.  If you stretch it out past what is possible on a phone, it converts to click events looking for a click on the strum and a 1/2/3/4 keystroke for the note buttons, so it's a two handed game.  But this would probably be tough when you consider tablets can be desktop-sized screens with no keyboard, and if you go too large and catch a browser when you're listening for two 'taps' that won't work.  Perhaps you can listen for two click events at the same time somehow, in an array together that's called upon.
