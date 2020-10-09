@@ -1,22 +1,66 @@
 body {
-    background-color: grey;
-    background-image: url("https://i.imgur.com/PvTUPaE.png");
-    /* background-repeat: no-repeat; */
-    /* background: transparent; */
+    background-image: url('https://i.imgur.com/PvTUPaE.png');
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -100px;
+	/* background-attachment: fixed; */
+	/* background-position: bottom; */
+	/* filter: opacity(30%);
+	z-index: +10; */
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+h1 {
+    padding-top: 1fr;
+    padding-bottom: 2fr;
+}
+
+h2 {
+
 }
 
 .guitarbuttons {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.8);
-    background: rgb(145, 92, 182);
-    padding: 15px 40px;
-    border-radius: 4px;
-    font-weight: normal;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.8);
+	/* background: rgb(187, 141, 57); good "guitar string" color */
+	padding: 10px 10px;
+	border-radius: 4px;
+	font-weight: normal;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out;
 }
 
 .glow:hover {
-    color: rgba(255, 255, 255, 1);
-    box-shadow: 0 5px 15px rgba(145, 92, 182, .4)
+	color: rgba(255, 255, 255, 1);
+	box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
+}
+
+#guitar {
+	display: inline-block;
+	/* grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%; */
+	/* grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%; */
+}
+
+/* #guitarImage {
+	background-image: url('https://i.imgur.com/PvTUPaE.png'); not sure how best to lay image
+} */
+
+#a {
+	/* grid-column-start: 3; not sure how best to lay image */ 
+	background: red;
+}
+
+#b {
+	background: blue;
+}
+
+#c {
+	background: green;
+}
+
+#d {
+	background: yellow;
 }
