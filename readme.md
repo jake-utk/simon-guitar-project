@@ -43,6 +43,8 @@
 ## Gold Features
 
 - As a player, I want each selection to come with a unique musical sound, so there's a level of immersion into a "concert" environment. (#1 GOAL)
+- As a player, I would like the game to be playable on desktop or mobile, so I can play 24/7 at home or on the go.
+- As a player, I would like the option to use the 1, 2, 3, 4 keys to select buttons as oppose to clicks, in case my mouse dies from playing too much.
 - As a player, I would like to be able to select between different instruments for different sound tones (perhaps an acoustic guitar or an electric guitar) for my button presses.
 - As a player, I would like to hear some sort of background music, so there's further immersion into a "concert" environment. (Gold - honestly not sure how possible this is considering anything that isn't done in rhythm is going to sound ridiculous)
 
