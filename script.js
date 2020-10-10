@@ -19,36 +19,54 @@ const redButton = document.querySelector('#red');
 const blueButton = document.querySelector('#blue');
 const greenButton = document.querySelector('#green');
 const yellowButton = document.querySelector('#yellow');
+const messages = document.querySelector('#messages')
+const jamButton = document.querySelector('#jam')
 
 // document.getElementById('go').style.visibility = 'hidden'; // HIDE START BUTTON
 
 startGame.addEventListener('click', (event) => {
+    event.preventDefault();
 	console.log(event.target);
 	document.getElementById('startgame').style.visibility = 'hidden';
-	document.getElementById('resetgame').style.visibility = 'visible';
+    document.getElementById('resetgame').style.visibility = 'visible';
+    // display message about simon's turn
+    // start simon's turn
 });
 
 resetGame.addEventListener('click', (event) => {
+    event.preventDefault();
 	console.log(event.target);
 	document.getElementById('resetgame').style.visibility = 'hidden';
-	document.getElementById('startgame').style.visibility = 'visible';
+    document.getElementById('startgame').style.visibility = 'visible';
+    // display game reset message
 });
 
 redButton.addEventListener('click', (event) => {
+    event.preventDefault()
     console.log(event.target);
 })
 
 blueButton.addEventListener('click', (event) => {
+    event.preventDefault();
 	console.log(event.target);
 });
 
 greenButton.addEventListener('click', (event) => {
+    event.preventDefault();
 	console.log(event.target);
 });
 
 yellowButton.addEventListener('click', (event) => {
+    event.preventDefault();
 	console.log(event.target);
 });
+
+jamButton.addEventListener('click', (event) => {
+	event.preventDefault();
+	console.log(event.target);
+});
+
+
 
 function simonPick() {
 	// checks to make sure it's Simon's turn
@@ -104,4 +122,9 @@ function updateRoundCount() {
 
 function movesToGo() {
 	// calculates (total number of elements in simonChoices array - current elements in playerChoices array) to show how many correct choices the player has to make before the round is complete.  Is this too complicated?
+}
+
+function playerJam() {
+    // submits player answers to array
+    // ends turn
 }

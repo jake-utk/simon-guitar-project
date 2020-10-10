@@ -28,21 +28,46 @@
 
 ## Javascript Pseudocode
 
-**Entire game should go something like this...**
+**Game round should go something like this...**
 
 - Listen for "Start Game" button to be clicked
-- Begin Simon's turn simonPick()
     - Hide "Start Game" button
+- Begin Simon's turn simonPick()
     - Change css styling of .guitarbuttons to GLOW
     - Delay a second
     - Change css styling of .guitarbuttons to NOT-GLOW
     - Generate random button value CHOICE (4 possibilities)
     - Push CHOICE into simonChoices[] array
+    - Show message "Simon's turn!" in #messages h2
     - Read simonChoices[] array one value at a time.  For each value..
         - Change css styling of value's corresponding .guitarbutton #id to GLOW
-        - Delay a second (twice as long as normal)
+        - Delay two seconds (twice as long as normal)
         - Change css styling of value's corresponding .guitarbutton #id to NOT-GLOW
         - Delay a second.
-    - Proceed to next value in array.
-    - After all values in array have been read, END.
-- 
+        - Proceed to next value in array.
+        - After all values in array have been read, END.
+    - END turn.
+- Begin Player's turn playerPick()
+    - Change css styling of .guitarbuttons to GLOW
+    - Delay a second
+    - Change css stying of .guitarbuttons to NOT-GLOW
+    - Show message "Your turn!" in #messages h2
+    - Make buttons interactive for the player.
+    - Listen to player to click on one of the buttons, CHOICE
+    - Push CHOICE into playerChoices[] array.
+    - 
+    - Make board non-interactive to player clicks
+
+- Check playerChoices array against simonChoices array to determine if they match 
+    - If false, then the player lost
+        - Show message "You lose!  Let me know if you want to play again by hitting RESET GAME!"
+        - END
+    - If true, then the player won
+        - Show message "Nice job!  Let me know when you're ready for another riff!"
+    - Clear existing values in playerChoices[] array. // MAYBE THIS SHOULD GO ELSEWHERE?
+    - Initiate Simon's turn
+    - End
+
+**Other Functions**
+
+- RESET GAME button at any point will cause game to reset.

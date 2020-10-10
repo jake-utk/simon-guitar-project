@@ -19,7 +19,6 @@ h2 {
 .guitarbuttons {
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.8);
-	/* background: rgb(187, 141, 57); good "guitar string" color if i go different route */
 	padding: 10px 10px;
 	border-radius: 4px;
 	font-weight: normal;
@@ -67,8 +66,8 @@ h2 {
 
 #resetgame {
 	font-size: 18px;
-	visibility: initial;
-	visibility: 'hidden';
+	visibility: initial 'hidden';
+	/* visibility: 'hidden'; */
 }
 
 #round {
@@ -77,4 +76,15 @@ h2 {
 
 #movesremaining {
     font-size: 20px;
+}
+
+#jam {
+	background: rgb(187, 141, 57);
+	ext-decoration: none;
+	/* color: rgba(255, 255, 255, 0.8); */
+	padding: 10px 40px;
+	border-radius: 4px;
+	font-weight: normal;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out;
 }
