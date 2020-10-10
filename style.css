@@ -14,8 +14,6 @@ h2 {
     font-size: 20px;
 }
 
-
-
 .guitarbuttons {
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.8);
@@ -34,16 +32,9 @@ h2 {
 #guitar {
     display: inline-block;
     font-size: 16px;
-	/* grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%; */
-	/* grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%; */
 }
 
-/* #guitarImage {
-	background-image: url('https://i.imgur.com/PvTUPaE.png'); not sure how best to lay image
-} */
-
 #red {
-	/* grid-column-start: 3; not sure how best to lay image */ 
 	background: red;
 }
 

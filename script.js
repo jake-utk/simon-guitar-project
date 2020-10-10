@@ -24,14 +24,6 @@ const jamButton = document.querySelector('#jam')
 
 // document.getElementById('go').style.visibility = 'hidden'; // HIDE START BUTTON
 
-startGame.addEventListener('click', (event) => {
-    event.preventDefault();
-	console.log(event.target);
-	document.getElementById('startgame').style.visibility = 'hidden';
-    document.getElementById('resetgame').style.visibility = 'visible';
-    // display message about simon's turn
-    // start simon's turn
-});
 
 resetGame.addEventListener('click', (event) => {
     event.preventDefault();
@@ -62,69 +54,32 @@ yellowButton.addEventListener('click', (event) => {
 });
 
 jamButton.addEventListener('click', (event) => {
-	event.preventDefault();
+    event.preventDefault();
 	console.log(event.target);
 });
 
 
+startGame.addEventListener('click', (event) => {
+    event.preventDefault();
+    console.log(event.target);
+    document.getElementById('startgame').style.visibility = 'hidden';
+    document.getElementById('resetgame').style.visibility = 'visible';
+    document.getElementById('messages').innerText = "Simon's turn!"
+    if (currentPlayer != simon) {
+        currentplayer = simon
+    }
+    return simonPick()
+});
 
 function simonPick() {
+    console.log('Simon picks now');
+
 	// checks to make sure it's Simon's turn
-	// produce a
+    // generate one of four possible values
+    // push value into simChoices[] array
 }
 
-function beginGame() {
-	// listens for "start game" button click
-	// initiates simon's first move
-	// potentially simonPick()? Not sure yet if I need a specific starting move for Simon
-}
-
-function hardStop() {
-	// listens for "reset game" button click
-	// triggers reset
-	// can reference runGame() from tictactoe
-}
-
-function switchTurn() {
-	// swaps turn
-	// can reference switchPlayer() from tictactoe
-}
-
-function checkWin() {
-	// checks if player array = computer array
-}
-
-function playerPick() {
-	// listens for player selection
-}
-
-function storePlayerPick() {
-	// adds the button pick of player to array playerChoices
-}
-
-function storeSimonPick() {
-	// adds the button pick of simon to array simonChoices
-}
-
-function handleClick() {
-	// REFERENCED FROM TICTACTOE, didn't actually use, but was in pseudocode
-	// all the stuff that happens when a user clicks a button
-	// determine which button was clicked
-}
-
-function gameInstructions() {
-	// shows game instructions on reload
-}
-
-function updateRoundCount() {
-	// updates the div="round"
-}
-
-function movesToGo() {
-	// calculates (total number of elements in simonChoices array - current elements in playerChoices array) to show how many correct choices the player has to make before the round is complete.  Is this too complicated?
-}
-
-function playerJam() {
-    // submits player answers to array
-    // ends turn
+function turnStartIndicator() {
+    // causes all 4 buttons to light up
+    
 }

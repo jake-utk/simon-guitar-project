@@ -55,7 +55,7 @@
     - Make buttons interactive for the player.
     - Listen to player to click on one of the buttons, CHOICE
     - Push CHOICE into playerChoices[] array.
-    - 
+    - ?????????? have to still figure this out
     - Make board non-interactive to player clicks
 
 - Check playerChoices array against simonChoices array to determine if they match 
@@ -70,4 +70,8 @@
 
 **Other Functions**
 
-- RESET GAME button at any point will cause game to reset.
+- Listen for RESET GAME button to be clicked
+    - Clear playerChoices[] array
+    - Clear simonChoices[] array
+    - Make currentPlayer simon
+    - 
