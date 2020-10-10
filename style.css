@@ -1,10 +1,5 @@
 body {
     background-image: url('https://i.imgur.com/l7ue4P4.png');
-	/* position: absolute; */
-	/* top: 50%;
-	left: 50%; */
-	/* margin-top: -50px;
-	margin-left: -100px; */
     background-repeat: no-repeat;
     text-align: center;
 }
@@ -24,7 +19,7 @@ h2 {
 .guitarbuttons {
 	text-decoration: none;
 	color: rgba(255, 255, 255, 0.8);
-	/* background: rgb(187, 141, 57); good "guitar string" color */
+	/* background: rgb(187, 141, 57); good "guitar string" color if i go different route */
 	padding: 10px 10px;
 	border-radius: 4px;
 	font-weight: normal;
@@ -48,25 +43,32 @@ h2 {
 	background-image: url('https://i.imgur.com/PvTUPaE.png'); not sure how best to lay image
 } */
 
-#a {
+#red {
 	/* grid-column-start: 3; not sure how best to lay image */ 
 	background: red;
 }
 
-#b {
+#blue {
 	background: blue;
 }
 
-#c {
+#green {
 	background: green;
 }
 
-#d {
+#yellow {
 	background: yellow;
 }
 
-#go {
-    font-size: 18px;
+#startgame {
+	font-size: 18px;
+	visibility: 'visible';
+}
+
+#resetgame {
+	font-size: 18px;
+	visibility: initial;
+	visibility: 'hidden';
 }
 
 #round {
