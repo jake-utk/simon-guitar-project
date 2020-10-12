@@ -1,53 +1,74 @@
 body {
-    background-image: url('https://i.imgur.com/l7ue4P4.png');
-    background-repeat: no-repeat;
-    text-align: center;
+	background-image: url('https://i.imgur.com/l7ue4P4.png');
+	background-repeat: no-repeat;
+	text-align: center;
 }
 
 h1 {
-    font-size: 40px;
-    padding-top: 1fr;
-    padding-bottom: 2fr;
+	font-size: 40px;
+	padding-bottom: 2fr;
+	padding-top: 1fr;
 }
 
 h2 {
-    font-size: 20px;
+	font-size: 20px;
 }
 
 .guitarbuttons {
-	text-decoration: none;
-	color: rgba(255, 255, 255, 0.8);
-	padding: 10px 10px;
 	border-radius: 4px;
+	color: rgba(255, 255, 255, 0.8);
 	font-weight: normal;
+	opacity: 0.5;
+	padding: 10px 10px;
+	text-decoration: none;
 	text-transform: uppercase;
 	transition: all 0.2s ease-in-out;
 }
 
-.glow:hover {
-	color: rgba(255, 255, 255, 1);
+/* .glow:hover {
 	box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
-}
+	color: rgba(255, 255, 255, 1);
+} */
 
 #guitar {
-    display: inline-block;
-    font-size: 16px;
+	display: inline-block;
+	font-size: 16px;
 }
 
 #red {
 	background: red;
 }
 
+#red.glow {
+	box-shadow: 0 5px 15px red;
+	opacity: 1;
+}
+
 #blue {
 	background: blue;
+}
+
+#blue.glow {
+	box-shadow: 0 5px 15px blue;
+	opacity: 1;
 }
 
 #green {
 	background: green;
 }
 
+#green.glow {
+	box-shadow: 0 5px 15px green;
+	opacity: 1;
+}
+
 #yellow {
 	background: yellow;
+}
+
+#yellow.glow {
+	box-shadow: 0 5px 15px yellow;
+	opacity: 1;
 }
 
 #startgame {
@@ -62,20 +83,20 @@ h2 {
 }
 
 #round {
-    font-size: 20px;
+	font-size: 20px;
 }
 
 #movesremaining {
-    font-size: 20px;
+	font-size: 20px;
 }
 
 #jam {
-	background: rgb(187, 141, 57);
-	ext-decoration: none;
 	/* color: rgba(255, 255, 255, 0.8); */
-	padding: 10px 40px;
+	background: rgb(187, 141, 57);
 	border-radius: 4px;
+	text-decoration: none;
 	font-weight: normal;
+	padding: 10px 40px;
 	text-transform: uppercase;
 	transition: all 0.2s ease-in-out;
 }

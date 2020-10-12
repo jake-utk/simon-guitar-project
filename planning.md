@@ -75,3 +75,5 @@
     - Clear simonChoices[] array
     - Make currentPlayer simon
     - 
+
+- setTimout() / you can do it for a second

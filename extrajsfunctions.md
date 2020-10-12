@@ -27,10 +27,6 @@ function storePlayerPick() {
 	// adds the button pick of player to array playerChoices
 }
 
-function storeSimonPick() {
-	// adds the button pick of simon to array simonChoices
-}
-
 function handleClick() {
 	// REFERENCED FROM TICTACTOE, didn't actually use, but was in pseudocode
 	// all the stuff that happens when a user clicks a button
