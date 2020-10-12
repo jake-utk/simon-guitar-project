@@ -45,21 +45,11 @@ h2 {
 	opacity: 1;
 }
 
-#red.newGlow {
-	box-shadow: 0 5px 15px red;
-	opacity: 1;
-}
-
 #blue {
 	background: blue;
 }
 
 #blue.glow {
-	box-shadow: 0 5px 15px blue;
-	opacity: 1;
-}
-
-#blue.newGlow {
 	box-shadow: 0 5px 15px blue;
 	opacity: 1;
 }
@@ -73,21 +63,11 @@ h2 {
 	opacity: 1;
 }
 
-#green.newGlow {
-	box-shadow: 0 5px 15px green;
-	opacity: 1;
-}
-
 #yellow {
 	background: yellow;
 }
 
 #yellow.glow {
-	box-shadow: 0 5px 15px yellow;
-	opacity: 1;
-}
-
-#yellow.newGlow {
 	box-shadow: 0 5px 15px yellow;
 	opacity: 1;
 }
