@@ -77,3 +77,9 @@
     - 
 
 - setTimout() / you can do it for a second
+
+## References
+
+- For setTimeout()
+    - https://www.bitdegree.org/learn/javascript-settimeout
+    - https://medium.com/@axionoso/watch-out-when-using-settimeout-in-for-loop-js-75a047e27a5f
