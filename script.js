@@ -12,11 +12,8 @@ guitarNeck.addEventListener("click", (event) => {
 });
 
 resetGame.addEventListener("click", (event) => {
-	// this doesn't actually do anything yet
 	playerChoices = [];
 	simonChoices = [];
-	console.log(playerChoices);
-	console.log(simonChoices);
 	document.getElementById("messages").innerText =
 		"...are you ready to Rock & Roll?";
 	event.preventDefault();
@@ -26,10 +23,6 @@ resetGame.addEventListener("click", (event) => {
 
 startGame.addEventListener("click", (event) => {
 	simonChoices = [];
-	console.log(
-		"simonChoices array has been reset by START GAME button click",
-		simonChoices
-	);
 	event.preventDefault();
 	document.getElementById("startgame").style.visibility = "hidden";
 	document.getElementById("resetgame").style.visibility = "visible";
@@ -38,10 +31,6 @@ startGame.addEventListener("click", (event) => {
 
 function simonPick() {
 	playerChoices = [];
-	console.log(
-		"playerChoices array has been reset by simonPick()",
-		playerChoices
-	);
 	document.getElementById("messages").innerText = "Simon's turn!";
 	let pick = Math.floor(Math.random() * 4);
 	let pickString = buttonArray[pick];
@@ -68,18 +57,13 @@ function simonSequence() {
 
 function checkWin() {
 	for (let i = 0; i < playerChoices.length; i++) {
-		console.log("Player choice:", playerChoices[i]);
-		console.log("simon choice:", simonChoices[i]);
-		console.log(i);
 		if (playerChoices[i] != simonChoices[i]) {
 			document.getElementById("messages").innerText =
 				"You lose! Hit RESET GAME to play again.";
 		} else if (simonChoices.length === playerChoices.length) {
-			console.log("simon should pick now");
 			simonPick();
 			return;
 		} else {
-			console.log("players turn is still ongoing");
 		}
 	}
 }
