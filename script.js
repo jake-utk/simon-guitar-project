@@ -20,7 +20,7 @@ const jamButton = document.querySelector("#jam");
 
 resetGame.addEventListener("click", (event) => {
 	event.preventDefault();
-	console.log(event.target);
+	// console.log(event.target);
 	document.getElementById("resetgame").style.visibility = "hidden";
 	document.getElementById("startgame").style.visibility = "visible";
 });
@@ -56,9 +56,9 @@ function simonPick() {
 	document.getElementById("messages").innerText = "Simon's turn!";
 	let pick = Math.floor(Math.random() * 4);
 	let pickString = buttonArray[pick];
-	console.log(
-		`the value being pushed to simonChoices array is ${pickString}, the next log is what is currently in the simonChoices array`
-	);
+	// console.log(
+	// 	`the value being pushed to simonChoices array is ${pickString}, the next log is what is currently in the simonChoices array`
+	// );
 	simonChoices.push(pickString);
 
 	simonSequence();
@@ -69,7 +69,7 @@ function simonSequence() {
 	removeGlow();
 	simonChoices.forEach((choice, index) => {
 		setTimeout(() => {
-			console.log(choice);
+			// console.log(choice);
 			document.getElementById(`${choice}`).classList.add("glow");
 		}, (index + 1) * 2000);
 		setTimeout(() => {
@@ -79,25 +79,30 @@ function simonSequence() {
 }
 
 function checkWin() {
-	for (let i = 0; i < playerChoices.length; i++) {
+	for (let i = 0; i < simonChoices.length; i++) {
+		console.log("Player choice:", playerChoices[i]);
+		console.log("simon choice:", simonChoices[i]);
+		console.log(i);
 		if (playerChoices[i] != simonChoices[i]) {
 			document.getElementById("messages").innerText = "You lose!";
-			playerChoices = [];
 			simonChoices = [];
-		} else if (simonChoices.length === i + 1) {
-			simonSequence();
+			playerChoices = [];
+		} else if (simonChoices.length === playerChoices.length) {
+			console.log("simon should pick now");
+			playerChoices = [];
+			simonPick();
 			return;
 		} else {
-            return
-        }
+			console.log("players turn is still ongoing");
+		}
 	}
 }
 
 buttons.forEach((button) => {
 	button.addEventListener("click", (event) => {
 		let playerPick = event.target.getAttribute("id");
+		// console.log(`player choice is ${playerPick}`);
 		playerChoices.push(playerPick);
-		console.log(playerChoices);
 		checkWin();
 	});
 });
