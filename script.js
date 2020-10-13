@@ -7,7 +7,7 @@ const startGame = document.querySelector("#startgame");
 const resetGame = document.querySelector("#resetgame");
 const buttons = document.querySelectorAll(".guitarbuttons");
 
-guitarNeck.addEventListener("click", (event) => {
+guitarNeck.addEventListener("click", (event) => { // not 100% sure i need this, maybe can put EPD in buttons and delete guitarNeck
 	event.preventDefault();
 });
 
@@ -63,7 +63,6 @@ function checkWin() {
 		} else if (simonChoices.length === playerChoices.length) {
 			simonPick();
 			return;
-		} else {
 		}
 	}
 }
