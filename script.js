@@ -12,18 +12,24 @@ guitarNeck.addEventListener("click", (event) => {
 });
 
 resetGame.addEventListener("click", (event) => {
-    // this doesn't actually do anything yet 
-    playerChoices = [];
-    simonChoices = [];
-    console.log(playerChoices);
-    console.log(simonChoices);
-    document.getElementById("messages").innerText = "...are you ready to Rock & Roll?"
+	// this doesn't actually do anything yet
+	playerChoices = [];
+	simonChoices = [];
+	console.log(playerChoices);
+	console.log(simonChoices);
+	document.getElementById("messages").innerText =
+		"...are you ready to Rock & Roll?";
 	event.preventDefault();
 	document.getElementById("resetgame").style.visibility = "visible";
 	document.getElementById("startgame").style.visibility = "visible";
 });
 
 startGame.addEventListener("click", (event) => {
+	simonChoices = [];
+	console.log(
+		"simonChoices array has been reset by START GAME button click",
+		simonChoices
+	);
 	event.preventDefault();
 	document.getElementById("startgame").style.visibility = "hidden";
 	document.getElementById("resetgame").style.visibility = "visible";
@@ -31,9 +37,12 @@ startGame.addEventListener("click", (event) => {
 });
 
 function simonPick() {
-    playerChoices = []
-    console.log('playerChoices array has been reset by simonPick()', playerChoices);
-    document.getElementById("messages").innerText = "Simon's turn!";
+	playerChoices = [];
+	console.log(
+		"playerChoices array has been reset by simonPick()",
+		playerChoices
+	);
+	document.getElementById("messages").innerText = "Simon's turn!";
 	let pick = Math.floor(Math.random() * 4);
 	let pickString = buttonArray[pick];
 	simonChoices.push(pickString);
@@ -41,8 +50,8 @@ function simonPick() {
 }
 
 function simonSequence() {
-    // add invisible div to prevent clicks
-    const messageDelay = (simonChoices.length + 1)
+	// add invisible div to prevent clicks
+	const messageDelay = simonChoices.length + 1;
 	removeGlow();
 	simonChoices.forEach((choice, index) => {
 		setTimeout(() => {
@@ -51,26 +60,22 @@ function simonSequence() {
 		setTimeout(() => {
 			removeGlow();
 		}, (index + 2) * 2000);
-    });
-    setTimeout(() => {
-        document.getElementById("messages").innerText = "Player's turn!"
-    }, (messageDelay * 2000) )
+	});
+	setTimeout(() => {
+		document.getElementById("messages").innerText = "Player's turn!";
+	}, messageDelay * 2000);
 }
 
 function checkWin() {
-	for (let i = 0; i < simonChoices.length; i++) {
+	for (let i = 0; i < playerChoices.length; i++) {
 		console.log("Player choice:", playerChoices[i]);
 		console.log("simon choice:", simonChoices[i]);
 		console.log(i);
 		if (playerChoices[i] != simonChoices[i]) {
-			document.getElementById("messages").innerText = "You lose!";
-			simonChoices = [];
-            playerChoices = [];
-            console.log('simonChoices array has been reset by checkWin()', simonChoices);
-            console.log('playerChoices array has been reset by checkWin()', playerChoices);
+			document.getElementById("messages").innerText =
+				"You lose! Hit RESET GAME to play again.";
 		} else if (simonChoices.length === playerChoices.length) {
 			console.log("simon should pick now");
-			// playerChoices = [];
 			simonPick();
 			return;
 		} else {
