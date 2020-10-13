@@ -1,8 +1,3 @@
-// random notes //
-// make sure to tell the player what to do from the very beginning via the h2.  i mean shit like tell them when the game loads in the browser "Click the same buttons as simon" or something, until a modal is developed to house game instructions.
-
-// **** Check out https://www.w3schools.com/js/js_timing.asp // setInterval() repeats a function endlessly?
-
 let playerChoices = [];
 let simonChoices = [];
 let buttonArray = ["red", "blue", "green", "yellow"];
@@ -11,38 +6,21 @@ const guitarNeck = document.querySelector("#guitar");
 const startGame = document.querySelector("#startgame");
 const resetGame = document.querySelector("#resetgame");
 const buttons = document.querySelectorAll(".guitarbuttons");
-const redButton = document.querySelector("#red");
-const blueButton = document.querySelector("#blue");
-const greenButton = document.querySelector("#green");
-const yellowButton = document.querySelector("#yellow");
-const messages = document.querySelector("#messages");
-const jamButton = document.querySelector("#jam");
+
+guitarNeck.addEventListener("click", (event) => {
+	event.preventDefault();
+});
 
 resetGame.addEventListener("click", (event) => {
+    // this doesn't actually do anything yet 
+    playerChoices = [];
+    simonChoices = [];
+    console.log(playerChoices);
+    console.log(simonChoices);
+    document.getElementById("messages").innerText = "...are you ready to Rock & Roll?"
 	event.preventDefault();
-	// console.log(event.target);
-	document.getElementById("resetgame").style.visibility = "hidden";
+	document.getElementById("resetgame").style.visibility = "visible";
 	document.getElementById("startgame").style.visibility = "visible";
-});
-
-redButton.addEventListener("click", (event) => {
-	event.preventDefault();
-	// console.log(event.target);
-});
-
-blueButton.addEventListener("click", (event) => {
-	event.preventDefault();
-	// console.log(event.target);
-});
-
-greenButton.addEventListener("click", (event) => {
-	event.preventDefault();
-	// console.log(event.target);
-});
-
-yellowButton.addEventListener("click", (event) => {
-	event.preventDefault();
-	// console.log(event.target);
 });
 
 startGame.addEventListener("click", (event) => {
@@ -53,29 +31,30 @@ startGame.addEventListener("click", (event) => {
 });
 
 function simonPick() {
-	document.getElementById("messages").innerText = "Simon's turn!";
+    playerChoices = []
+    console.log('playerChoices array has been reset by simonPick()', playerChoices);
+    document.getElementById("messages").innerText = "Simon's turn!";
 	let pick = Math.floor(Math.random() * 4);
 	let pickString = buttonArray[pick];
-	// console.log(
-	// 	`the value being pushed to simonChoices array is ${pickString}, the next log is what is currently in the simonChoices array`
-	// );
 	simonChoices.push(pickString);
-
 	simonSequence();
 }
 
 function simonSequence() {
-	// add invisible div to prevent clicks
+    // add invisible div to prevent clicks
+    const messageDelay = (simonChoices.length + 1)
 	removeGlow();
 	simonChoices.forEach((choice, index) => {
 		setTimeout(() => {
-			// console.log(choice);
 			document.getElementById(`${choice}`).classList.add("glow");
 		}, (index + 1) * 2000);
 		setTimeout(() => {
 			removeGlow();
 		}, (index + 2) * 2000);
-	});
+    });
+    setTimeout(() => {
+        document.getElementById("messages").innerText = "Player's turn!"
+    }, (messageDelay * 2000) )
 }
 
 function checkWin() {
@@ -86,10 +65,12 @@ function checkWin() {
 		if (playerChoices[i] != simonChoices[i]) {
 			document.getElementById("messages").innerText = "You lose!";
 			simonChoices = [];
-			playerChoices = [];
+            playerChoices = [];
+            console.log('simonChoices array has been reset by checkWin()', simonChoices);
+            console.log('playerChoices array has been reset by checkWin()', playerChoices);
 		} else if (simonChoices.length === playerChoices.length) {
 			console.log("simon should pick now");
-			playerChoices = [];
+			// playerChoices = [];
 			simonPick();
 			return;
 		} else {
@@ -101,7 +82,6 @@ function checkWin() {
 buttons.forEach((button) => {
 	button.addEventListener("click", (event) => {
 		let playerPick = event.target.getAttribute("id");
-		// console.log(`player choice is ${playerPick}`);
 		playerChoices.push(playerPick);
 		checkWin();
 	});
