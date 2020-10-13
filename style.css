@@ -26,6 +26,15 @@ h2 {
 	transition: all 0.2s ease-in-out;
 }
 
+.overlay {
+    background-color: rgba(1, 1, 1, 0.7);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
 /* .glow:hover {
 	box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
 	color: rgba(255, 255, 255, 1);

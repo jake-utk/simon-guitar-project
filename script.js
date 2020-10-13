@@ -3,9 +3,6 @@
 
 // **** Check out https://www.w3schools.com/js/js_timing.asp // setInterval() repeats a function endlessly?
 
-const player = "p";
-const simon = "s";
-let currentPlayer = simon; // start with simon every round
 let playerChoices = [];
 let simonChoices = [];
 let buttonArray = ["red", "blue", "green", "yellow"];
@@ -48,51 +45,27 @@ yellowButton.addEventListener("click", (event) => {
 	// console.log(event.target);
 });
 
-jamButton.addEventListener("click", (event) => {
-	event.preventDefault();
-	// console.log(event.target);
-});
-
 startGame.addEventListener("click", (event) => {
 	event.preventDefault();
 	document.getElementById("startgame").style.visibility = "hidden";
 	document.getElementById("resetgame").style.visibility = "visible";
-	if (currentPlayer != simon) {
-		currentplayer = simon;
-	}
 	return simonPick();
 });
 
 function simonPick() {
-	if (currentPlayer === simon) {
-		document.getElementById("messages").innerText = "Simon's turn!";
-		let pick = Math.floor(Math.random() * 4);
-		let pickString = buttonArray[pick];
-		console.log(
-			`the value being pushed to simonChoices array is ${pickString}, the next log is what is currently in the simonChoices array`
-		);
-		simonChoices.push(pickString);
-	}
-	return simonSequence();
+	document.getElementById("messages").innerText = "Simon's turn!";
+	let pick = Math.floor(Math.random() * 4);
+	let pickString = buttonArray[pick];
+	console.log(
+		`the value being pushed to simonChoices array is ${pickString}, the next log is what is currently in the simonChoices array`
+	);
+	simonChoices.push(pickString);
+
+	simonSequence();
 }
 
-// function playerPick() {
-// 	if (currentPlayer != player) {
-// 		currentPlayer = player;
-// 		document.getElementById("messages").innerText = "Player's turn!";
-// 	}
-// 	setTimeout(() => {
-// 		removeGlow();
-// 	}, 1000);
-// 	buttons.addEventListener("click", (event) => {
-// 		console.log(event.target);
-// 		// playerChoices.push(event.target.id)
-// 	});
-// 	// return checkWin()
-// }
-
 function simonSequence() {
-	console.log(simonChoices);
+	// add invisible div to prevent clicks
 	removeGlow();
 	simonChoices.forEach((choice, index) => {
 		setTimeout(() => {
@@ -102,33 +75,35 @@ function simonSequence() {
 		setTimeout(() => {
 			removeGlow();
 		}, (index + 2) * 2000);
-		// return playerPick();
 	});
 }
 
 function checkWin() {
-	if (playerChoices === simonChoices) {
-		return simonPick();
-	} else {
-		document.getElementById("messages").innerText =
-			"You lose!  Hit RESET GAME to play again.";
+	for (let i = 0; i < playerChoices.length; i++) {
+		if (playerChoices[i] != simonChoices[i]) {
+			document.getElementById("messages").innerText = "You lose!";
+			playerChoices = [];
+			simonChoices = [];
+		} else if (simonChoices.length === i + 1) {
+			simonSequence();
+			return;
+		} else {
+            return
+        }
 	}
 }
+
+buttons.forEach((button) => {
+	button.addEventListener("click", (event) => {
+		let playerPick = event.target.getAttribute("id");
+		playerChoices.push(playerPick);
+		console.log(playerChoices);
+		checkWin();
+	});
+});
 
 function removeGlow() {
 	buttons.forEach((button) => {
 		button.classList.remove("glow");
 	});
 }
-
-// FOR LOOP FOR simonSequence()
-// for (let i = 0; i < simonChoices.length; i++) {
-// 	let pick = simonChoices[i];
-// 	(function lightSimonPickUp() {
-// 		console.log(pick);
-// 		document.getElementById(`${pick}`).classList.add("newGlow");
-// 		setTimeout(() => {
-// 			return lightSimonPickUp();
-// 		}, 2000);
-// 	});
-// }
