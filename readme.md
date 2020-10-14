@@ -74,12 +74,17 @@
 
 - No unsolved problems, aside from hours in the day.
 - Timing of sequence was a major hurdle; this was overcome.
-- CSS remains a major hurdle.  I just have no idea what I'm doing, and didn't have time to learn during the scope of the project.
-- CSS seems like an incredibly powerful language that we glossed over in about half a day in class.  I hadn't felt this extreme deficiency until now - this will certainly be a major focus of my self-learning as I continue past this course.
+- CSS remains a major hurdle.  I just have no idea what I'm doing, and didn't have time to learn an entire language during the scope of the project.
+- CSS seems like an incredibly powerful language that we glossed over in about half a day in class.  I hadn't felt this extreme deficiency until now - this will certainly be a major focus of my self-learning as I continue past this course.  Definitely disappointed with the outcome of this facet of the project.
+- Unfortunately, most of my time was spent spinning my wheels as I tried to research, understand, and grasp CSS concepts.  I wasted too much time in the beginning on this, had to table it completely until I solved the Javascript logic, and then I had to quit the Javascript logic prematurely so I could return to the CSS before the project's completion time.
+- Final reflection:  I am proud with the logic of the game, and I take pride in the fact I did it without outside help - no classmate assistance, no office hours / instructor help through the completion of the game as it is at this current commit.
+    - I understand that it likely would've been more beneficial time/efficiency-wise to seek help from the instructor once I encountered a Javascript/CSS problem that took more than a few hours to overcome.
+    - In the scope of a job, where my time is billed hourly and my efficiency impacts the businesses's profitability, I would reach out for help much sooner rather than continue to brute-force the problem.  But in a class setting, I view instructor help as a crutch, and I want to grow into a developer that is not only a self-starter but a problem-solver, able and knowledgeable enough to troubleshoot my own code until I come to a working resolution without NEEDING outside input.
 
 ## Next Steps
 
 - Actually learn CSS.
 - Implement a break in the glow when simon picks the same value twice.
 - Implement an invisible div (or some other method) to prevent user clicks during Simon's turn.
-- 
+- Implement sound on the button clicks.
+- Improve styling to work for all types of phones/tablets/desktop.
