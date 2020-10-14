@@ -1,7 +1,20 @@
 body {
 	background-color: grey;
+	font-family: 'Permanent Marker', 'cursive';
+	height: 100vh;
+	overflow: hidden;
 	position: relative;
 	text-align: center;
+	width: 100vw;
+}
+
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 20px;
 }
 
 .background {
@@ -9,25 +22,27 @@ body {
 	background-size: cover;
 	height: 1500px;
 	position: absolute;
-	right: -500px;
-	top: -623px;
+	right: -590px;
+	top: -520px;
 	width: 1500px;
 	z-index: -1
 }
 
-h1 {
-	font-size: 40px;
-	padding-bottom: 2fr;
-	padding-top: 1fr;
-}
-
-h2 {
-	font-size: 20px;
+.buttonwrap {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	right: -590px;
+	top: -547px;
+	width: 100%;
+	
 }
 
 .guitarbuttons {
 	border-radius: 4px;
 	color: black;
+	font-family: 'Staatliches', cursive;
+	font-size: 22px;
 	font-weight: normal;
 	opacity: 0.5;
 	padding: 10px 10px;
@@ -45,10 +60,6 @@ h2 {
     top: 0;
 }
 
-/* .glow:hover {
-	box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
-	color: rgba(255, 255, 255, 1);
-} */
 
 #guitar {
 	display: inline-block;
@@ -93,13 +104,10 @@ h2 {
 
 #startgame {
 	font-size: 18px;
-	visibility: 'visible';
 }
 
 #resetgame {
 	font-size: 18px;
-	visibility: initial 'hidden';
-	/* visibility: 'hidden'; */
 }
 
 #round {
@@ -109,4 +117,3 @@ h2 {
 #movesremaining {
 	font-size: 20px;
 }
-

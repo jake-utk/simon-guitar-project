@@ -78,9 +78,13 @@
 
 - setTimout() / you can do it for a second
 
+- Look up LOCAL STORAGE for high score keeper?
+
 ## References
 
 - For setTimeout()
     - https://www.bitdegree.org/learn/javascript-settimeout
     - https://medium.com/@axionoso/watch-out-when-using-settimeout-in-for-loop-js-75a047e27a5f
     - https://travishorn.com/delaying-foreach-iterations-2ebd4b29ad30
+
+    

@@ -62,7 +62,9 @@
 
 ## Installation Instructions
 
-- _This is one of the project requirements but makes no sense? Ask in office hours_
+- Fork Repo
+- Clone it
+- To contribute please make pull request!
 
 ## Embedded App Screenshot
 
@@ -70,8 +72,14 @@
 
 ## Unsolved Problems, Major Hurdles, and Reflections Along the Way...
 
--
+- No unsolved problems, aside from hours in the day.
+- Timing of sequence was a major hurdle; this was overcome.
+- CSS remains a major hurdle.  I just have no idea what I'm doing, and didn't have time to learn during the scope of the project.
+- CSS seems like an incredibly powerful language that we glossed over in about half a day in class.  I hadn't felt this extreme deficiency until now - this will certainly be a major focus of my self-learning as I continue past this course.
 
 ## Next Steps
 
--
+- Actually learn CSS.
+- Implement a break in the glow when simon picks the same value twice.
+- Implement an invisible div (or some other method) to prevent user clicks during Simon's turn.
+- 
