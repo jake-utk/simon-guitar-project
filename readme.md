@@ -68,7 +68,7 @@
 
 ## Embedded App Screenshot
 
-- _This is one of the project requirements, add last before turn in_
+- ![Embedded Pic of App](Embedded-Pic-of-App.png)
 
 ## Unsolved Problems, Major Hurdles, and Reflections Along the Way...
 
